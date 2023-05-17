@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7733C38C-3D5F-4DF1-ACCA-6E52978378A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarRentalSystem</RootNamespace>
+    <AssemblyName>CarRentalSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalculateBill.cs" />
+    <Compile Include="CarRentalReturnAbstractDerivedClass.cs" />
+    <Compile Include="CarRentalReturnPriceAbstractClass.cs" />
+    <Compile Include="CarRentalDataAccessClass.cs" />
+    <Compile Include="CarRentalDataBaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarRentalDataBaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CarRentalIntermediaryClass.cs" />
+    <Compile Include="CarRentalMdiContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarRentalMdiContainer.Designer.cs">
+      <DependentUpon>CarRentalMdiContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarRentalSystemDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarRentalSystemDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerReviewsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerReviewsForm.Designer.cs">
+      <DependentUpon>CustomerReviewsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerReviewsSealedClass.cs" />
+    <Compile Include="GeneratePickupReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratePickupReportForm.Designer.cs">
+      <DependentUpon>GeneratePickupReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateReturnReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateReturnReportForm.Designer.cs">
+      <DependentUpon>GenerateReturnReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ICustomer.cs" />
+    <Compile Include="InvalidCredentialsException.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakeReservationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakeReservationsForm.Designer.cs">
+      <DependentUpon>MakeReservationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessPickUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessPickUP.Designer.cs">
+      <DependentUpon>ProcessPickUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessReturnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessReturnForm.Designer.cs">
+      <DependentUpon>ProcessReturnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReviewObjectClass.cs" />
+    <Compile Include="ViewUpdateCancelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUpdateCancelForm.Designer.cs">
+      <DependentUpon>ViewUpdateCancelForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarRentalMdiContainer.resx">
+      <DependentUpon>CarRentalMdiContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerReviewsForm.resx">
+      <DependentUpon>CustomerReviewsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneratePickupReportForm.resx">
+      <DependentUpon>GeneratePickupReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateReturnReportForm.resx">
+      <DependentUpon>GenerateReturnReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakeReservationsForm.resx">
+      <DependentUpon>MakeReservationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessPickUP.resx">
+      <DependentUpon>ProcessPickUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessReturnForm.resx">
+      <DependentUpon>ProcessReturnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ViewUpdateCancelForm.resx">
+      <DependentUpon>ViewUpdateCancelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CarRentalDataBaseDataSet.xsc">
+      <DependentUpon>CarRentalDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalDataBaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarRentalDataBaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarRentalDataBaseDataSet.xss">
+      <DependentUpon>CarRentalDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalSystemDatabaseDataSet.xsc">
+      <DependentUpon>CarRentalSystemDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalSystemDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarRentalSystemDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarRentalSystemDatabaseDataSet.xss">
+      <DependentUpon>CarRentalSystemDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppData\CarRentalDataBase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\CarRentalDataBase_log.ldf">
+      <DependentUpon>CarRentalDataBase.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\CarRentalSystemDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\CarRentalSystemDatabase_log.ldf">
+      <DependentUpon>CarRentalSystemDatabase.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CarRentalDataBase.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CarRentalDataBase_log.ldf">
+      <DependentUpon>CarRentalDataBase.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CarRentalSystemDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CarRentalSystemDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>CarRentalSystemDatabase.mdf</DependentUpon>
+    </Content>
+    <None Include="sale-car-rental.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
