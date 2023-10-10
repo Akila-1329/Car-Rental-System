@@ -1,2 +1,2 @@
 # Car-Rental-System
-This project aims to develop an application using C# for a car rental system that Makes reservations, manages reservations, Process Pickup, Process Returns, and Generates reports. 
+Implemented multi-forms, user interface components, menu navigation, error handling, and database integration. Employed object-oriented principles, including classes, interfaces, generics, inheritance, abstraction, polymorphism, while adhering to a three-tier architecture for enhanced security and user-friendly interface with validations. Demonstrated robust error handling through exception handling techniques, while employing events and lambdas for event-driven behavior.
